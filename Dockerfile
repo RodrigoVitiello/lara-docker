@@ -1,5 +1,7 @@
 FROM php:7.3.4-apache
 
+RUN a2enmod rewrite
+
 # For development environment
 RUN usermod --non-unique --uid 1000 www-data && groupmod --non-unique --gid 1000 www-data
 
